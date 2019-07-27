@@ -1,1 +1,44 @@
 // Specific CSS for your home-page
+
+
+.container {
+  width: 900px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.page-title {
+  margin: 48px 0 48px 0;
+
+  h1 {
+    color: rgba(0,0,0,0.7);
+  }
+}
+
+.cocktail-name {
+  color: white;
+  font-size: 32px;
+  text-shadow: 1px 1px rgba(0,0,0,0.7);
+  &:hover {
+    text-decoration: none;
+    color: rgb(220,220,220);
+  }
+}
+
+.new-cocktail {
+  overflow: hidden;
+  height: 400px;
+  width: 600px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+.new-cocktail-content {
+  margin: 16px;
+}

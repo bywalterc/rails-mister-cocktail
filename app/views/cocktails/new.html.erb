@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="new-cocktail">
+
+  <div>
+    <%= link_to "Back", cocktails_path %>
+  </div>
+
+    <div class="new-cocktail-content">
+      <div class="page-title">
+        <h1>New Cocktail</h1>
+      </div>
+
+      <%= form_for(@cocktail) do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :picture_url %>
+          <%= f.text_field :picture_url, class: 'form-control' %>
+        </div>
+
+        <%= f.submit class: 'btn btn-dark' %>
+      <% end %>
+    </div>
+  </div>
+</div>

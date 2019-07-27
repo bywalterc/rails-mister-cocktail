@@ -1,0 +1,21 @@
+<div class="container">
+  <div>
+    <%= link_to "Back", cocktails_path %>
+  </div>
+
+  <div class="new-cocktail">
+    <div class="new-cocktail-content">
+      <div class="page-title">
+        <h2>Add new incredient to <%= @cocktail.name %></h2>
+      </div>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.association :ingredient %>
+        <%= f.input :description %>
+        <%= f.submit "Add the ingredient", class: "btn btn-dark" %>
+      <% end %>
+    </div>
+  </div>
+
+
+</div>
+

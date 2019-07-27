@@ -1,0 +1,94 @@
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 32px 0;
+
+
+  p {
+    color: white;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.ingredient-list {
+  overflow: hidden;
+  height: 300px;
+  width: 500px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 40px 0;
+  border-radius: 8px;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 600px;
+  margin: 48px auto;
+  border-radius: 5px;
+
+  h3 {
+    font-size: 24px;
+    color: rgba(0,0,0,0.5);
+    margin: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    opacity: .7;
+    margin: 16px 32px;
+    vertical-align: middle;
+  }
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.card-trip .ingredient-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 32px;
+    color: rgba(0,0,0,0.8);
+    margin: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    opacity: .7;
+    margin: 16px 32px;
+    vertical-align: middle;
+  }
+}
+
+.single-ingredient{
+  display: flex;
+  justify-content: space-between;
+  .trash {
+    color: rgba(0,0,0,0.2);
+    &:hover {
+      color: rgba(0,0,0,0.7);
+    }
+  }
+}
+
