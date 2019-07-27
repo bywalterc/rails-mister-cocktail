@@ -5,8 +5,6 @@
 
 <div class="cards">
   <% @cocktails.each do |cocktail|  %>
-    <!-- <p><%= link_to cocktail.name, cocktail_path(cocktail), {class: ""} %></p>
-    <img src=<%= cocktail.picture_url %> alt=""> -->
     <div class="card-category" style="background-image: url(<%= cocktail.picture_url %>)">
       <p><%= link_to cocktail.name.downcase, cocktail_path(cocktail), {class: "cocktail-name"} %></p>
     </div>
