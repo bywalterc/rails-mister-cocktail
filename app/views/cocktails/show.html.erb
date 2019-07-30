@@ -17,7 +17,9 @@
           <div class="single-ingredient">
             <p><%= dose.description %> of <%= dose.ingredient.name %></p>
             <!-- <p class="trash"><i class="far fa-trash-alt"></i></p> -->
+            <div class="trash_link">
             <%= link_to "🗑", dose_path(dose), method: :delete %>
+            </div>
           </div>
         <% end %>
 
