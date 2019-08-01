@@ -25,7 +25,9 @@
   text-shadow: 1px 1px rgba(0,0,0,0.7);
   &:hover {
     text-decoration: none;
-    color: rgb(220,220,220);
+    p {
+      color: rgb(200,200,200);
+    }
   }
 }
 
@@ -44,7 +46,7 @@
 
 }
 
-.new-cocktail {
+#new-ingredient {
   overflow: hidden;
   height: 500px;
   width: 600px;
@@ -52,6 +54,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   margin: 40px auto;
   border-radius: 8px;
+  display: none;
 }
 
 .new-cocktail-content {

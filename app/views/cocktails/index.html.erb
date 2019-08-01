@@ -6,9 +6,16 @@
 <div class="cards">
   <% @cocktails.each do |cocktail|  %>
     <% if cocktail.photo.present? %>
-      <div class="card-category" style="background-image: url(<%= cl_image_path cocktail.photo, crop: :fill %>)" >
-        <p><%= link_to cocktail.name.downcase, cocktail_path(cocktail), {class: "cocktail-name"} %></p>
-      </div>
+
+
+      <%= link_to cocktail_path(cocktail), {class: "cocktail-name"} do %>
+        <div class="card-category" style="background-image: url(<%= cl_image_path cocktail.photo, crop: :fill %>)" >
+          <p><%= cocktail.name.downcase %></p>
+        </div>
+      <% end %>
+
+
+
     <% else %>
       <div class="card-category" style="background-image: url(https://images.crateandbarrel.com/is/image/Crate/DylanFHS16/?$web_product_hero$&190411135019&wid=625&hei=625)
         <p><%= link_to cocktail.name.downcase, cocktail_path(cocktail), {class: "cocktail-name"} %></p>

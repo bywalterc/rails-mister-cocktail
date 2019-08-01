@@ -4,26 +4,42 @@
     <%= link_to "< Back", cocktails_path, {class: "back-link"} %>
   </div>
 
+<!-- Cocktail card -->
   <div class="card-trip">
     <%= cl_image_tag @cocktail.photo, crop: :fill %>
     <div class="card-trip-infos">
       <div>
         <div class="ingredient-header">
           <h2><%=  @cocktail.name.capitalize %></h2>
-          <p><%= link_to "+ Ingredient", new_cocktail_dose_path(@cocktail), {class: "back-link"} %></p>
+          <p class="back-link" id="ingredient-button">+ Ingredient</p>
         </div>
         <h3>Ingredients</h3>
         <% @cocktail.doses.each do |dose|  %>
           <div class="single-ingredient">
             <p><%= dose.description %> of <%= dose.ingredient.name %></p>
             <!-- <p class="trash"><i class="far fa-trash-alt"></i></p> -->
-            <div class="trash_link">
-            <%= link_to "🗑", dose_path(dose), method: :delete %>
-            </div>
+            <p class="trash_link">
+              <%= link_to dose_path(dose), method: :delete do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </p>
           </div>
         <% end %>
-
       </div>
+    </div>
+  </div>
+
+  <!-- Add ingredient form -->
+  <div class="new-cocktail" id="new-ingredient">
+    <div class="new-cocktail-content">
+      <div class="page-title">
+        <h2>Add new ingredient to <%= @cocktail.name %></h2>
+      </div>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.association :ingredient %>
+        <%= f.input :description %>
+        <%= f.submit "Add the ingredient", class: "btn btn-dark" %>
+      <% end %>
     </div>
   </div>
 

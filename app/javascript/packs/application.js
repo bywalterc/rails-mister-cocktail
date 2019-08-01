@@ -18,3 +18,16 @@
 console.log('Hello World from Webpacker')
 
 import 'bootstrap';
+
+const button = document.querySelector("#ingredient-button");
+const form = document.querySelector("#new-ingredient");
+
+
+button.addEventListener("click", (event) => {
+
+  console.log("Click worked !");
+  console.log(form);
+  event.preventDefault();
+  form.style.display = "";
+
+});
