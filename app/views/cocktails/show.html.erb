@@ -1,16 +1,16 @@
 <div class="container">
 
-  <div>
-    <%= link_to "Back", cocktails_path %>
+  <div class="back-link-section">
+    <%= link_to "< Back", cocktails_path, {class: "back-link"} %>
   </div>
 
   <div class="card-trip">
-    <img src=<%= @cocktail.picture_url %> />
+    <%= cl_image_tag @cocktail.photo, crop: :fill %>
     <div class="card-trip-infos">
       <div>
         <div class="ingredient-header">
           <h2><%=  @cocktail.name.capitalize %></h2>
-          <p><%= link_to "+ Ingredient", new_cocktail_dose_path(@cocktail)  %></p>
+          <p><%= link_to "+ Ingredient", new_cocktail_dose_path(@cocktail), {class: "back-link"} %></p>
         </div>
         <h3>Ingredients</h3>
         <% @cocktail.doses.each do |dose|  %>

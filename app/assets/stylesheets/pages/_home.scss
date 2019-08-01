@@ -29,6 +29,21 @@
   }
 }
 
+.back-link-section {
+  width: 600px;
+  margin: 40px auto;
+
+}
+
+.back-link {
+  color: rgba(0,0,0,0.6);
+  &:hover {
+    text-decoration: none;
+    color: rgb(10,10,10);
+  }
+
+}
+
 .new-cocktail {
   overflow: hidden;
   height: 500px;

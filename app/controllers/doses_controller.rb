@@ -1,5 +1,5 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail, except: [:destroy, :create]
+  before_action :set_cocktail, except: [:destroy]
 
   def new
     @dose = Dose.new
